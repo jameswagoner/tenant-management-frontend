@@ -12,6 +12,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
     "tailwindcss": "^1.4.6"
   },
   "scripts": {
@@ -19,8 +20,8 @@
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "build:css": "postcss src/layout/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/layout/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
