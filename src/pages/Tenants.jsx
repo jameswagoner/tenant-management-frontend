@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Header from '../layout/blocks/Header'
+import Nav from '../layout/blocks/Nav'
 
 class Tenants extends Component {
   render () {
     return (
       <>
+        <Nav />
         <Header title="Tenants Page" />
         <main>
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
