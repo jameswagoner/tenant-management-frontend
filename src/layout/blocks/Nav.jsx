@@ -13,15 +13,15 @@ function Nav () {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline">
                   <a href="#"
-                     className="px-3 py-2 rounded-md text-sm font-medium text-white bg-indigo-800 focus:outline-none focus:text-white focus:bg-indigo-600">Dashboard</a>
+                     className="nav-link active">Dashboard</a>
                   <a href="#"
-                     className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white hover:bg-indigo-600 focus:outline-none focus:text-white focus:bg-indigo-600">Team</a>
+                     className="ml-4 nav-link">Team</a>
                   <a href="#"
-                     className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white hover:bg-indigo-600 focus:outline-none focus:text-white focus:bg-indigo-600">Projects</a>
+                     className="ml-4 nav-link">Projects</a>
                   <a href="#"
-                     className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white hover:bg-indigo-600 focus:outline-none focus:text-white focus:bg-indigo-600">Calendar</a>
+                     className="ml-4 nav-link">Calendar</a>
                   <a href="#"
-                     className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white hover:bg-indigo-600 focus:outline-none focus:text-white focus:bg-indigo-600">Reports</a>
+                     className="ml-4 nav-link">Reports</a>
                 </div>
               </div>
             </div>

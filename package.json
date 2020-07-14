@@ -3,16 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tailwindcss/ui": "^0.3.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "autoprefixer": "^9.8.4",
-    "postcss-cli": "^7.1.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1",
+    "react-transition-group": "^4.4.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.3.0",
+    "autoprefixer": "^9.8.5",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
     "tailwindcss": "^1.4.6"
   },
   "scripts": {
@@ -20,8 +25,8 @@
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/layout/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/layout/assets/tailwind.css -o src/assets/main.css"
+    "build:css": "postcss src/layout/css/app.css -o src/layout/css/styles.css",
+    "watch:css": "postcss src/layout/css/app.css -o src/layout/css/styles.css"
   },
   "eslintConfig": {
     "extends": "react-app"
