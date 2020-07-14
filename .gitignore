@@ -4,4 +4,4 @@ build
 package.lock
 .env
 
-src/layout/css/styles.scss
+src/layout/css/styles.css

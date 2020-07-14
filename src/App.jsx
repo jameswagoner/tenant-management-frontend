@@ -1,22 +1,30 @@
-import React from 'react'
-import Nav from './layout/blocks/Nav'
-import Header from './layout/blocks/Header'
+import React, { Component } from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <>
-      <Nav />
+import Nav from './layout/blocks/Nav';
 
-      <Header />
+import Dashboard from './pages/Dashboard';
+import Properties from './pages/Properties'
+import Tenants from './pages/Tenants'
+import Billing from './pages/Billing'
 
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="px-4 py-4 sm:px-0">
-            <h2>It's Working</h2>
-          </div>
-        </div>
-      </main>
-    </>
-  )
+class App extends Component {
+  render () {
+    return (
+      <BrowserRouter>
+        <>
+          <Nav />
+          <Switch>
+            <Redirect from="/" to="/dashboard" exact />
+            <Route path="/dashboard" component={ Dashboard } />
+            <Route path="/properties" component={ Properties } />
+            <Route path="/tenants" component={ Tenants } />
+            <Route path="/billing" component={ Billing } />
+          </Switch>
+        </>
+      </BrowserRouter>
+    )
+  }
 }
+
 export default App;
