@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideOver from '../../components/SlideOver'
+import { NavLink } from 'react-router-dom'
 
 const pageHeader = props => {
   return (
@@ -30,7 +30,9 @@ const pageHeader = props => {
           </div>
           <div className="mt-4 flex-shrink-0 flex md:mt-0 md:ml-4">
             <span className="shadow-sm rounded-md">
-              <SlideOver />
+              <NavLink to="/admin/users/create" className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 transition duration-150 ease-in-out">
+                New User
+              </NavLink>
             </span>
           </div>
         </div>
