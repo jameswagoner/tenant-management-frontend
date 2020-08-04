@@ -15,7 +15,7 @@ class App extends Component {
       <BrowserRouter>
         <>
           <Switch>
-            <Redirect from="/" to="/dashboard" exact />
+            <Redirect from="/" to="/login" exact />
             <Route path="/login" component={ Login } />
             <Route path="/dashboard" component={ Dashboard } />
             <Route path="/properties" component={ Properties } />
