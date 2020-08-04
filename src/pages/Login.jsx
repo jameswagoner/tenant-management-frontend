@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { setSession } from '../services/auth';
 import axios from 'axios';
 
 class Login extends Component {
@@ -11,22 +12,19 @@ class Login extends Component {
       password: ''
     };
 
-    this.baseUrl = 'http://localhost:8008';
+    this.apiUrl = process.env.REACT_APP_API_BASE_URL;
   }
 
   submitLogin (state) {
-    axios.post(this.baseUrl + '/login', {
-      email: state.email,
-      password: state.password
-    })
-      .then(({data}) => data.token && this.storeToken(data.token))
-      .then(() => {
-        this.props.history.push('/dashboard')
-      })
-  }
-
-  storeToken (token) {
-    sessionStorage.setItem('token', token);
+    axios.post(
+      this.apiUrl + '/login',
+      {
+        email: state.email,
+        password: state.password
+      }
+    )
+    .then(({data}) => data.success && setSession(data))
+    .then(() => this.props.history.push('/dashboard'))
   }
 
   render () {
