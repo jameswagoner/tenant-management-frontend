@@ -12,3 +12,7 @@ export const setSession = ({ token, user }) => {
   sessionStorage.setItem('token', token);
   sessionStorage.setItem('user', JSON.stringify(user));
 }
+
+export const getToken = () => {
+  return sessionStorage.getItem('token');
+}
