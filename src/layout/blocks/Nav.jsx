@@ -15,6 +15,7 @@ const nav = props => {
                 <NavLink to="/dashboard" className="nav-link">Dashboard</NavLink>
                 <NavLink to="/properties" className="nav-link">Properties</NavLink>
                 <NavLink to="/tenants" className="nav-link">Tenants</NavLink>
+                <NavLink to="/work-orders" className="nav-link">Work Orders</NavLink>
                 <NavLink to="/billing" className="nav-link">Billing</NavLink>
               </div>
             </div>

@@ -9,6 +9,7 @@ import Billing from './pages/Billing';
 import Login from './pages/Login';
 import Users from './pages/Admin/Users';
 import CreateUser from './pages/Admin/CreateUser';
+import WorkOrders from './pages/WorkOrders'
 
 class App extends Component {
   render () {
@@ -18,12 +19,13 @@ class App extends Component {
           <Switch>
             <Redirect from="/" to="/login" exact />
             <Route path="/login" component={ Login } />
-            <ProtectedRoute path="/dashboard" component={ Dashboard } />
-            <ProtectedRoute path="/properties" component={ Properties } />
-            <ProtectedRoute path="/tenants" component={ Tenants } />
-            <ProtectedRoute path="/billing" component={ Billing } />
-            <ProtectedRoute path="/admin/users/create" component={ CreateUser } />
-            <ProtectedRoute path="/admin/users" component={ Users } />
+            <Route path="/dashboard" component={ Dashboard } />
+            <Route path="/properties" component={ Properties } />
+            <Route path="/tenants" component={ Tenants } />
+            <Route path="/work-orders" component={ WorkOrders } />
+            <Route path="/billing" component={ Billing } />
+            <Route path="/admin/users/create" component={ CreateUser } />
+            <Route path="/admin/users" component={ Users } />
           </Switch>
         </>
       </BrowserRouter>

@@ -7,7 +7,7 @@ class Users extends Component {
     return (
       <>
         <Nav />
-        <PageHeader title="Users" />
+        <PageHeader breadcrumbs={[]} title="Users" />
         <main>
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             <div className="px-4 py-4 sm:px-0">
